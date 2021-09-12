@@ -6,8 +6,10 @@ import javax.jws.WebService;
 @WebService
 public class LocalWS {
     @WebMethod
-    public String getString(String name) {
-        return "Hello" + name;
+    public Message getMessage(Message name ) {
+        Message message = new Message();
+        message.setText("Hello, "+ name.getText());
+        return message;
     }
 
 }
